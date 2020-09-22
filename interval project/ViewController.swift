@@ -77,9 +77,11 @@ class ViewController: UIViewController {
             restTimeNumber.text = String(ogRestTime!)
         setsValue -= 1
         setsNumber.text = "\(setsValue!)"
+        
     
         }
         
+
     }
         
    
