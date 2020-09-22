@@ -21,18 +21,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeForEachSetNumber: UILabel!
     @IBOutlet weak var restTimeNumber: UILabel!
     
-    var timer = Timer()
-    var timer2 = Timer ()
-    
+    var timer = Timer() //first timer
+    var timer2 = Timer () //rest timer
+   
+    //these are basically the int version of what the user inputs
     var setsValue : Int!
     var timeEachSet : Int!
     var restTime : Int!
     
-    var ogTimeEachSet : Int!
-    var ogRestTime : Int!
+    var ogTimeEachSet : Int! //original time for each set value so that i can change the number back to the original number once the first timer expires
+    var ogRestTime : Int! //same thing but for the rest timer
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
     }
 
     @IBAction func buttonClicked(_ sender: Any) {
@@ -53,7 +56,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    //these are the two timers
     
     @objc func timeForEachSetCountDownMethod(){
      timeEachSet -= 1
